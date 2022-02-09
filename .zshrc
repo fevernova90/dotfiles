@@ -126,4 +126,12 @@ load-nvmrc
 # fix_wsl2_interop
 
 # WSLHostPatcher - will make wslhost.exe automatically bind port on all interface
-~/wslhostpatcher/WSLHostPatcher.exe
+if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
+    echo "Detected on WSL, running WSLHostPatcher ..."
+    ~/dotfiles/wslhostpatcher/WSLHostPatcher.exe
+else
+    echo "This is not WSL, skipping WSLHostPatcher"
+fi
+
+echo "Welcome Back Muhaimin" | figlet
+
