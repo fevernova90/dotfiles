@@ -13,9 +13,9 @@ if [ -d "${PHPENV_ROOT}" ]; then
 fi
 
 # Setting DISPLAY env to WSL2 IP:<width>:<height>
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+# export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 # Enabling dbus for GUI app inter-communication
-sudo /etc/init.d/dbus start &> /dev/null
+# sudo /etc/init.d/dbus start &> /dev/null
 
 # rbenv (Ruby Env Helper)
 # export PATH="$HOME/.rbenv/bin:$PATH"
