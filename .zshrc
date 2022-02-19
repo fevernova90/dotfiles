@@ -6,11 +6,20 @@ export PATH="${HOME?}/bin:${PATH}"
 export GPG_TTY=$TTY
 
 # PHPEnv
-export PHPENV_ROOT="/home/fevernova90/.phpenv"
-if [ -d "${PHPENV_ROOT}" ]; then
-  export PATH="${PHPENV_ROOT}/bin:${PATH}"
-  eval "$(phpenv init -)"
-fi
+# export PHPENV_ROOT="/home/fevernova90/.phpenv"
+# if [ -d "${PHPENV_ROOT}" ]; then
+#   export PATH="${PHPENV_ROOT}/bin:${PATH}"
+#   eval "$(phpenv init -)"
+# fi
+
+# Brew-installed php8.0
+export PATH="/usr/local/opt/php@8.0/bin:$PATH"
+export PATH="/usr/local/opt/php@8.0/sbin:$PATH"
+
+export PATH="~/.composer/vendor/bin:$PATH"
+
+# PHPBrew
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
 # Setting DISPLAY env to WSL2 IP:<width>:<height>
 # export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
