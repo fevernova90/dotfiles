@@ -16,7 +16,7 @@ export GPG_TTY=$TTY
 export PATH="/usr/local/opt/php@8.0/bin:$PATH"
 export PATH="/usr/local/opt/php@8.0/sbin:$PATH"
 
-export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="${HOME?}/.composer/vendor/bin:$PATH"
 
 # PHPBrew
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
