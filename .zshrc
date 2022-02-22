@@ -144,6 +144,3 @@ fi
 
 # Clear screen, comment this to see any errors during shell init
 printf "\033c"
-
-echo "Welcome Back Muhaimin" | figlet
-
